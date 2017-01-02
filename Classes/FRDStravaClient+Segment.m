@@ -26,7 +26,7 @@
 
 + (NSValueTransformer *)segmentsJSONTransformer
 {
-    return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:[StravaSegment class]];
+    return [MTLJSONAdapter arrayTransformerWithModelClass:[StravaSegment class]];
 }
 
 @end

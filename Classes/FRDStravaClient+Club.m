@@ -33,17 +33,17 @@
 
 + (NSValueTransformer *)activitiesJSONTransformer
 {
-    return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:[StravaActivity class]];
+    return [MTLJSONAdapter arrayTransformerWithModelClass:[StravaActivity class]];
 }
 
 + (NSValueTransformer *)membersJSONTransformer
 {
-    return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:[StravaAthlete class]];
+    return [MTLJSONAdapter arrayTransformerWithModelClass:[StravaAthlete class]];
 }
 
 + (NSValueTransformer *)clubsJSONTransformer
 {
-    return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:[StravaClub class]];
+    return [MTLJSONAdapter arrayTransformerWithModelClass:[StravaClub class]];
 }
 
 @end

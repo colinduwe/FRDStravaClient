@@ -16,7 +16,7 @@
 ///
 @interface StravaMap : MTLModel<MTLJSONSerializing>
 
-@property (nonatomic, readonly) NSInteger id;
+@property (nonatomic, readonly) NSString *id;
 /// Lat and lon points, encoded in Google http://strava.github.io/api/#polylines, @see +decodePolyline:
 @property (nonatomic, readonly) NSString *polyline;
 /// Summary Lat and lon points, encoded in Google http://strava.github.io/api/#polylines, @see +decodePolyline:

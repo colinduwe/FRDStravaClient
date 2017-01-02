@@ -25,7 +25,7 @@
              @"elapsedTime": @"elapsed_time",
              @"movingTime": @"moving_time",
              @"startDate": @"start_date",
-             @"distance": @"start_date_local",
+             @"distance": @"distance",
              @"startIndex": @"start_index",
              @"endIndex": @"end_index",
              @"hidden": @"hidden",
@@ -51,14 +51,14 @@
     HANDLE_NIL_FOR_KEY(@"resourceState",        _resourceState,         kResourceStateUnknown);
 }
 
-+ (NSValueTransformer *) startDateJSONValueTransformer
++ (NSValueTransformer *) startDateJSONTransformer
 {
     return [StravaCommon dateJSONTransformer];
 }
 
 + (NSValueTransformer *) segmentJSONValueTransformer
 {
-    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:StravaSegment.class];
+    return [MTLJSONAdapter dictionaryTransformerWithModelClass:StravaSegment.class];
 }
 
 

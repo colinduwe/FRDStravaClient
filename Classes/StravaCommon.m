@@ -39,17 +39,25 @@
 
 + (NSValueTransformer *)locationJSONTransformer
 {
-    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSArray *coordinates) {
+    return [MTLValueTransformer transformerUsingForwardBlock:^(NSArray *coordinates, BOOL *success, NSError **error) {
         CLLocationDegrees latitude = [coordinates[0] doubleValue];
         CLLocationDegrees longitude = [coordinates[1] doubleValue];
         return [NSValue valueWithMKCoordinate:CLLocationCoordinate2DMake(latitude, longitude)];
-    } reverseBlock:^(NSValue *coordinateValue) {
+    } reverseBlock:^(NSValue *coordinateValue, BOOL *success, NSError **error) {
         CLLocationCoordinate2D coordinate = [coordinateValue MKCoordinateValue];
         return @[@(coordinate.latitude), @(coordinate.longitude)];
     }];
 }
 
-+ (NSValueTransformer *)dateJSONTransformer
+
++ (NSDateFormatter *)dateFormatter {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
+    dateFormatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss'Z'";
+    return dateFormatter;
+}
+
+/* + (NSValueTransformer *)dateJSONTransformer
 {
     static NSDateFormatter *dateFormatter = nil;
     
@@ -61,10 +69,20 @@
         dateFormatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss'Z'";
     }
     
-    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSString *str) {
+    return [MTLValueTransformer transformerUsingForwardBlock:^(NSString *str, BOOL *success, NSError **error) {
         return [dateFormatter dateFromString:str];
-    } reverseBlock:^(NSDate *date) {
+    } reverseBlock:^(NSDate *date, BOOL *success, NSError **error) {
         return [dateFormatter stringFromDate:date];
+    }];
+}
+ */
+
++ (NSValueTransformer *)dateJSONTransformer {
+    return [MTLValueTransformer transformerUsingForwardBlock:^id(NSString *dateString, BOOL *success, NSError *__autoreleasing *error) {
+        NSLog(@"%@", [self.dateFormatter dateFromString:dateString]);
+        return [self.dateFormatter dateFromString:dateString];
+    } reverseBlock:^id(NSDate *date, BOOL *success, NSError *__autoreleasing *error) {
+        return [self.dateFormatter stringFromDate:date];
     }];
 }
 

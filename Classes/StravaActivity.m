@@ -77,12 +77,12 @@
 
 + (NSValueTransformer *)athleteJSONTransformer
 {
-    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:StravaAthlete.class];
+    return [MTLJSONAdapter dictionaryTransformerWithModelClass:StravaAthlete.class];
 }
 
 + (NSValueTransformer *)mapJSONTransformer
 {
-    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:StravaMap.class];
+    return [MTLJSONAdapter dictionaryTransformerWithModelClass:StravaMap.class];
 }
 
 + (NSValueTransformer *)typeJSONTransformer
@@ -107,7 +107,7 @@
 
 + (NSValueTransformer *) segmentEffortsJSONTransformer
 {
-    return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:StravaSegmentEffort.class];
+    return [MTLJSONAdapter arrayTransformerWithModelClass:StravaSegmentEffort.class];
 }
 
 @end

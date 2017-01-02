@@ -35,27 +35,27 @@
 
 + (NSValueTransformer *)activitiesJSONTransformer
 {
-    return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:[StravaActivity class]];
+    return [MTLJSONAdapter arrayTransformerWithModelClass:[StravaActivity class]];
 }
 
 + (NSValueTransformer *)photosJSONTransformer
 {
-    return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:[StravaActivityPhoto class]];
+    return [MTLJSONAdapter arrayTransformerWithModelClass:[StravaActivityPhoto class]];
 }
 
 + (NSValueTransformer *)zonesJSONTransformer
 {
-    return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:[StravaActivityZone class]];
+    return [MTLJSONAdapter arrayTransformerWithModelClass:[StravaActivityZone class]];
 }
 
 + (NSValueTransformer *)commentsJSONTransformer
 {
-    return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:[StravaActivityComment class]];
+    return [MTLJSONAdapter arrayTransformerWithModelClass:[StravaActivityComment class]];
 }
 
 + (NSValueTransformer *)kudoersJSONTransformer
 {
-    return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:[StravaAthlete class]];
+    return [MTLJSONAdapter arrayTransformerWithModelClass:[StravaAthlete class]];
 }
 
 @end
@@ -76,6 +76,7 @@
     
     [manager GET:[NSString stringWithFormat:@"activities/%ld", (long)activityId]
       parameters:params
+        progress:^(NSProgress * _Nonnull downloadProgress) { }
          success:^(NSURLSessionTask *operation, id responseObject) {
              
              NSError *error = nil;
@@ -170,6 +171,7 @@
     
     [manager GET:[NSString stringWithFormat:@"activities/%ld/photos", (long) activityId]
       parameters:params
+        progress:^(NSProgress * _Nonnull downloadProgress) { }
          success:^(NSURLSessionTask *operation, id responseObject) {
              
              if (responseObject == nil) {
@@ -208,6 +210,7 @@
     
     [manager GET:[NSString stringWithFormat:@"activities/%ld/zones", (long) activityId]
       parameters:params
+        progress:^(NSProgress * _Nonnull downloadProgress) { }
          success:^(NSURLSessionTask *operation, id responseObject) {
              
              if (responseObject == nil) {
@@ -253,6 +256,7 @@
     
     [manager GET:[NSString stringWithFormat:@"activities/%ld/comments", (long) activityId]
       parameters:params
+        progress:^(NSProgress * _Nonnull downloadProgress) { }
          success:^(NSURLSessionTask *operation, id responseObject) {
              
              if (responseObject == nil) {
@@ -297,6 +301,7 @@
     
     [manager GET:[NSString stringWithFormat:@"activities/%ld/kudos", (long) activityId]
       parameters:params
+        progress:^(NSProgress * _Nonnull downloadProgress) { }
          success:^(NSURLSessionTask *operation, id responseObject) {
              
              if (responseObject == nil) {
@@ -347,11 +352,12 @@
 
     [manager GET:showFriends ? @"activities/following" : @"activities"
       parameters:mutableParams
+        progress:^(NSProgress * _Nonnull downloadProgress) { }
          success:^(NSURLSessionTask *operation, id responseObject) {
              
              NSError *error = nil;
              
-             NSDictionary *wrapper = @{ @"activities": responseObject };
+             NSDictionary *wrapper = @{ @"activities" : responseObject };
              
              ActivityResponse *response = [MTLJSONAdapter modelOfClass:[ActivityResponse class]
                                                     fromJSONDictionary:wrapper

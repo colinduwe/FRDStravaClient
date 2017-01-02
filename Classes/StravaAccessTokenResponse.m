@@ -18,8 +18,8 @@
 }
 
 + (NSValueTransformer *)athleteJSONTransformer
-{
-    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:StravaAthlete.class];
+{    
+    return [MTLJSONAdapter dictionaryTransformerWithModelClass:StravaAthlete.class];
 }
 
 @end

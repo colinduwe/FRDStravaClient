@@ -83,7 +83,7 @@
 
 + (NSValueTransformer *)mapJSONTransformer
 {
-    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:StravaMap.class];
+    return [MTLJSONAdapter arrayTransformerWithModelClass:StravaMap.class];
 }
 
 

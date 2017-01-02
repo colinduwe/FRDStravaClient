@@ -64,7 +64,7 @@
 
 + (NSValueTransformer *) distributionBucketsJSONTransformer
 {
-    return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:StravaActivityZoneDistributionBucket.class];
+    return [MTLJSONAdapter arrayTransformerWithModelClass:StravaActivityZoneDistributionBucket.class];
 }
 
 

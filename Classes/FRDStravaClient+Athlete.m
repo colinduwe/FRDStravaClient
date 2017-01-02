@@ -24,7 +24,7 @@
 
 + (NSValueTransformer *)athletesJSONTransformer
 {
-    return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:[StravaAthlete class]];
+    return [MTLJSONAdapter arrayTransformerWithModelClass:[StravaAthlete class]];
 }
 
 @end

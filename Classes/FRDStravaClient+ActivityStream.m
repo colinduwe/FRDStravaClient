@@ -26,7 +26,7 @@
 }
 + (NSValueTransformer *)streamsJSONTransformer
 {
-    return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:[StravaStream class]];
+    return [MTLJSONAdapter arrayTransformerWithModelClass:[StravaStream class]];
 }
 
 @end

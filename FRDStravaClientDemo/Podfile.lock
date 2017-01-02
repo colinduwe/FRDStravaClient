@@ -14,11 +14,11 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - EDColor (0.4.0)
+  - EDColor (1.0.0)
   - JBChartView (2.5.5)
-  - Mantle (1.5):
-    - Mantle/extobjc (= 1.5)
-  - Mantle/extobjc (1.5)
+  - Mantle (2.1.0):
+    - Mantle/extobjc (= 2.1.0)
+  - Mantle/extobjc (2.1.0)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
@@ -27,16 +27,16 @@ DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - EDColor
   - JBChartView (~> 2.5.0)
-  - Mantle (= 1.5)
+  - Mantle (= 2.1)
   - SDWebImage (~> 3.8)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  EDColor: 89d19a013279a5604d61650721c15f20fefaaf00
+  EDColor: c83f9a61f9f9b3c23d541f1feb561558e29cb088
   JBChartView: cb1b48dc9e5ad985a84ecba22f867c39c60eed2a
-  Mantle: 3bf6db311c8b4a19b6be01f2483fa4590aa166f3
+  Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: b9363ac16acea8aa9d3c256a4195c7ea6f98a2ca
+PODFILE CHECKSUM: c1b45c5ffa00e4254007b66636e74255c5cda317
 
 COCOAPODS: 1.1.1

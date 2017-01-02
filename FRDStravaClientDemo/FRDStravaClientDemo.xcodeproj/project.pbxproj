@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0AB44197E6F84B128019FABE /* libPods-FRDStravaClientDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9078EBFF324CF9876BD37C /* libPods-FRDStravaClientDemo.a */; };
+		1B5CB0E4259E05611819E9B1 /* Pods_FRDStravaClientDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EB12791DBC6E1394C388BB /* Pods_FRDStravaClientDemo.framework */; };
 		28199D29191EDCAF00EE7C4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28199D28191EDCAF00EE7C4E /* Foundation.framework */; };
 		28199D2B191EDCAF00EE7C4E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28199D2A191EDCAF00EE7C4E /* CoreGraphics.framework */; };
 		28199D2D191EDCAF00EE7C4E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28199D2C191EDCAF00EE7C4E /* UIKit.framework */; };
@@ -241,8 +241,9 @@
 		28E0CA981936D3BE004DEA75 /* StravaActivityComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StravaActivityComment.m; sourceTree = "<group>"; };
 		28E0CA9D1936D7B7004DEA75 /* ActivityCommentsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityCommentsTableViewController.h; sourceTree = "<group>"; };
 		28E0CA9E1936D7B7004DEA75 /* ActivityCommentsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityCommentsTableViewController.m; sourceTree = "<group>"; };
-		ED9078EBFF324CF9876BD37C /* libPods-FRDStravaClientDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FRDStravaClientDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD1AD5BB3633458F93C31110 /* Pods-FRDStravaClientDemo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FRDStravaClientDemo.xcconfig"; path = "Pods/Pods-FRDStravaClientDemo.xcconfig"; sourceTree = "<group>"; };
+		47E9F5483DC21B5039BDA8EE /* Pods-FRDStravaClientDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FRDStravaClientDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FRDStravaClientDemo/Pods-FRDStravaClientDemo.release.xcconfig"; sourceTree = "<group>"; };
+		49EB12791DBC6E1394C388BB /* Pods_FRDStravaClientDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FRDStravaClientDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80561391C606637B059E5BB0 /* Pods-FRDStravaClientDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FRDStravaClientDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FRDStravaClientDemo/Pods-FRDStravaClientDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,7 +254,7 @@
 				28199D2B191EDCAF00EE7C4E /* CoreGraphics.framework in Frameworks */,
 				28199D2D191EDCAF00EE7C4E /* UIKit.framework in Frameworks */,
 				28199D29191EDCAF00EE7C4E /* Foundation.framework in Frameworks */,
-				0AB44197E6F84B128019FABE /* libPods-FRDStravaClientDemo.a in Frameworks */,
+				1B5CB0E4259E05611819E9B1 /* Pods_FRDStravaClientDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +278,7 @@
 				28199D47191EDCAF00EE7C4E /* FRDStravaClientDemoTests */,
 				28199D27191EDCAF00EE7C4E /* Frameworks */,
 				28199D26191EDCAF00EE7C4E /* Products */,
-				FD1AD5BB3633458F93C31110 /* Pods-FRDStravaClientDemo.xcconfig */,
+				BA6E600471C4722E1FA7739D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -297,7 +298,7 @@
 				28199D2A191EDCAF00EE7C4E /* CoreGraphics.framework */,
 				28199D2C191EDCAF00EE7C4E /* UIKit.framework */,
 				28199D41191EDCAF00EE7C4E /* XCTest.framework */,
-				ED9078EBFF324CF9876BD37C /* libPods-FRDStravaClientDemo.a */,
+				49EB12791DBC6E1394C388BB /* Pods_FRDStravaClientDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -645,6 +646,15 @@
 			name = "Segments & Efforts";
 			sourceTree = "<group>";
 		};
+		BA6E600471C4722E1FA7739D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				80561391C606637B059E5BB0 /* Pods-FRDStravaClientDemo.debug.xcconfig */,
+				47E9F5483DC21B5039BDA8EE /* Pods-FRDStravaClientDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -652,11 +662,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28199D51191EDCAF00EE7C4E /* Build configuration list for PBXNativeTarget "FRDStravaClientDemo" */;
 			buildPhases = (
-				1A7D1E4B20DD4DF0814C4922 /* Check Pods Manifest.lock */,
+				79185BCC3681FE16BB7FC2B3 /* [CP] Check Pods Manifest.lock */,
 				28199D21191EDCAF00EE7C4E /* Sources */,
 				28199D22191EDCAF00EE7C4E /* Frameworks */,
 				28199D23191EDCAF00EE7C4E /* Resources */,
-				3303C62663754E65ABDD231F /* Copy Pods Resources */,
+				57D3CD705BA363F18244F6AC /* [CP] Embed Pods Frameworks */,
+				35D2651474221B1269738178 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -691,9 +702,12 @@
 		28199D1D191EDCAF00EE7C4E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Sebastien Windal";
 				TargetAttributes = {
+					28199D24191EDCAF00EE7C4E = {
+						DevelopmentTeam = ANE8PEQ48S;
+					};
 					28199D3F191EDCAF00EE7C4E = {
 						TestTargetID = 28199D24191EDCAF00EE7C4E;
 					};
@@ -745,34 +759,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1A7D1E4B20DD4DF0814C4922 /* Check Pods Manifest.lock */ = {
+		35D2651474221B1269738178 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FRDStravaClientDemo/Pods-FRDStravaClientDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3303C62663754E65ABDD231F /* Copy Pods Resources */ = {
+		57D3CD705BA363F18244F6AC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-FRDStravaClientDemo-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FRDStravaClientDemo/Pods-FRDStravaClientDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79185BCC3681FE16BB7FC2B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -897,13 +926,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -916,7 +951,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -935,20 +970,25 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -956,14 +996,16 @@
 		};
 		28199D52191EDCAF00EE7C4E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD1AD5BB3633458F93C31110 /* Pods-FRDStravaClientDemo.xcconfig */;
+			baseConfigurationReference = 80561391C606637B059E5BB0 /* Pods-FRDStravaClientDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = ANE8PEQ48S;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FRDStravaClientDemo/FRDStravaClientDemo-Prefix.pch";
 				INFOPLIST_FILE = "FRDStravaClientDemo/FRDStravaClientDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.freerangedevelopers.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -971,14 +1013,16 @@
 		};
 		28199D53191EDCAF00EE7C4E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD1AD5BB3633458F93C31110 /* Pods-FRDStravaClientDemo.xcconfig */;
+			baseConfigurationReference = 47E9F5483DC21B5039BDA8EE /* Pods-FRDStravaClientDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = ANE8PEQ48S;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FRDStravaClientDemo/FRDStravaClientDemo-Prefix.pch";
 				INFOPLIST_FILE = "FRDStravaClientDemo/FRDStravaClientDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.freerangedevelopers.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1000,6 +1044,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "FRDStravaClientDemoTests/FRDStravaClientDemoTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.freerangedevelopers.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -1018,6 +1063,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FRDStravaClientDemo/FRDStravaClientDemo-Prefix.pch";
 				INFOPLIST_FILE = "FRDStravaClientDemoTests/FRDStravaClientDemoTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.freerangedevelopers.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;

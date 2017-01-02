@@ -26,7 +26,7 @@
 }
 + (NSValueTransformer *)lapsJSONTransformer
 {
-    return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:[StravaActivityLap class]];
+    return [MTLJSONAdapter arrayTransformerWithModelClass:[StravaActivityLap class]];
 }
 
 @end
